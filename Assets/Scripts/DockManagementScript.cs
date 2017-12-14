@@ -5,10 +5,10 @@ using UnityEngine.UI;
 
 public class DockManagementScript : MonoBehaviour {
 
-	public Image backwards;
-	public Image pause;
-	public Image play;
-	public Image forward;
+	public Image backwardsImg;
+	public Image pauseImg;
+	public Image playImg;
+	public Image forwardImg;
 	public Image aiguille;
 	enum states{backwards,pause,play,forward};
 
@@ -33,20 +33,16 @@ public class DockManagementScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetKeyDown (KeyCode.Alpha1)) {
-			currentState = (int)states.backwards; 
-			SetColorsAndSpeed ();
+			Backwards ();
 		}
 		if (Input.GetKeyDown (KeyCode.Alpha2)) {
-			currentState = (int)states.pause;
-			SetColorsAndSpeed ();
+			Pause ();
 		}
 		if (Input.GetKeyDown (KeyCode.Alpha3)) {
-			currentState = (int)states.play;
-			SetColorsAndSpeed ();
+			Play ();
 		}
 		if (Input.GetKeyDown (KeyCode.Alpha4)) {
-			currentState = (int)states.forward;
-			SetColorsAndSpeed ();
+			Forward ();
 		}
 
 		if (currentStopWatchSpeed > 0) {
@@ -65,32 +61,52 @@ public class DockManagementScript : MonoBehaviour {
 
 	void SetColorsAndSpeed(){
 
-		backwards.color = Color.black;
-		pause.color = Color.black;
-		play.color = Color.black;
-		forward.color = Color.black;
+		backwardsImg.color = Color.black;
+		pauseImg.color = Color.black;
+		playImg.color = Color.black;
+		forwardImg.color = Color.black;
 
 		switch (currentState) {
 		case (int)states.backwards:
-			backwards.color = Color.white;
+			backwardsImg.color = Color.white;
 			currentStopWatchSpeed = -0.5f * globalStopWatchSpeed;
 			manaScript.consumption = true;
 			break;
 		case (int)states.pause:
-			pause.color = Color.white;
+			pauseImg.color = Color.white;
 			currentStopWatchSpeed = 0;
 			manaScript.consumption = true;
 			break;
 		case (int)states.play:
-			play.color = Color.white;
+			playImg.color = Color.white;
 			currentStopWatchSpeed = 0.5f*globalStopWatchSpeed;
 			manaScript.consumption = false;
 			break;
 		case (int)states.forward:
-			forward.color = Color.white;
+			forwardImg.color = Color.white;
 			currentStopWatchSpeed = 1.0f*globalStopWatchSpeed;
 			manaScript.consumption = true;
 			break;
 		}
+	}
+
+	void Backwards(){
+		currentState = (int)states.backwards; 
+		SetColorsAndSpeed ();
+	}
+
+	void Pause(){
+		currentState = (int)states.pause;
+		SetColorsAndSpeed ();
+	}
+
+	void Play(){
+		currentState = (int)states.play;
+		SetColorsAndSpeed ();
+	}
+
+	void Forward(){
+		currentState = (int)states.forward; 
+		SetColorsAndSpeed ();
 	}
 }
