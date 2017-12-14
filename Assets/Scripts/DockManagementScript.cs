@@ -18,6 +18,8 @@ public class DockManagementScript : MonoBehaviour {
 	public float globalStopWatchSpeed = 1.0f;
 	float currentStopWatchSpeed;
 
+	public ManaScript manaScript;
+
 	int currentState;
 	// Use this for initialization
 	void Start () {
@@ -70,19 +72,23 @@ public class DockManagementScript : MonoBehaviour {
 		switch (currentState) {
 		case (int)states.backwards:
 			backwards.color = Color.white;
-			currentStopWatchSpeed = -0.5f*globalStopWatchSpeed;
+			currentStopWatchSpeed = -0.5f * globalStopWatchSpeed;
+			manaScript.consumption = true;
 			break;
 		case (int)states.pause:
 			pause.color = Color.white;
 			currentStopWatchSpeed = 0;
+			manaScript.consumption = true;
 			break;
 		case (int)states.play:
 			play.color = Color.white;
 			currentStopWatchSpeed = 0.5f*globalStopWatchSpeed;
+			manaScript.consumption = false;
 			break;
 		case (int)states.forward:
 			forward.color = Color.white;
 			currentStopWatchSpeed = 1.0f*globalStopWatchSpeed;
+			manaScript.consumption = true;
 			break;
 		}
 	}
