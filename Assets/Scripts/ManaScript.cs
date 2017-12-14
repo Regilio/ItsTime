@@ -12,8 +12,9 @@ public class ManaScript : MonoBehaviour
     private float initMana = 100;
     public ManaScript mana;
     private bool consumption;
-    public GameObject PauseCanvas;
-    public bool Paused = false;
+    public float consumptionSpeed = 8;
+    public float vitessePuits = 15;
+    public float valeurPotion = 25;
 
     public float MyCurrentValue
     {
@@ -47,7 +48,7 @@ public class ManaScript : MonoBehaviour
         content = GetComponent<Image>();
         mana.Initialize(initMana, initMana);
         consumption = false;
-     //   Pause();
+
     }
 
 
@@ -59,15 +60,12 @@ public class ManaScript : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.I))        //Quand on appuie sur I, on consomme/deconsomme
         {
             consumption = !consumption;
-          //  Paused = !Paused;
-        //    Pause();
+
         }
         if (consumption == true)
         {
             Debug.Log("on consomme");
-            mana.MyCurrentValue -= Time.deltaTime * 8;
-
-            //Mettre ici le changement de couleur de l'ecran pour montrer qu'on a active la pause
+            mana.MyCurrentValue -= Time.deltaTime * consumptionSpeed;
         }
 
         if (mana.MyCurrentValue <= 0)
@@ -82,13 +80,13 @@ public class ManaScript : MonoBehaviour
         if (other.gameObject.tag == "PuitMana")
         {
             Debug.Log("Puit de Mana");
-            mana.MyCurrentValue += Time.deltaTime * 15;
+            mana.MyCurrentValue += Time.deltaTime * vitessePuits;
         }
 
         if (other.gameObject.tag == "Potion")
         {
             Debug.Log("Potion ramassee");
-            mana.MyCurrentValue += 25;
+            mana.MyCurrentValue += valeurPotion;
         }
     }
 
@@ -96,8 +94,8 @@ public class ManaScript : MonoBehaviour
     {
         if (other.gameObject.tag == "PuitMana")
         {
-            Debug.Log("Puit de Mana");
-            mana.MyCurrentValue += Time.deltaTime * 15;
+            Debug.Log("Puits de Mana");
+            mana.MyCurrentValue += Time.deltaTime * vitessePuits;
         }
     }
 
@@ -105,7 +103,7 @@ public class ManaScript : MonoBehaviour
     {
         if (other.gameObject.tag == "PuitMana")
         {
-            Debug.Log("Sortie Puit de Mana");
+            Debug.Log("Sortie Puits de Mana");
             mana.MyCurrentValue = mana.MyCurrentValue;
         }
     }
@@ -116,9 +114,6 @@ public class ManaScript : MonoBehaviour
         MyCurrentValue = currentValue;
     }
 
-  //  private void Pause()
-   // {
-    //    PauseCanvas.SetActive(Paused);
-    //}
+
 
 }
