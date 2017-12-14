@@ -948,8 +948,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mana: {fileID: 1223459137}
-  PauseCanvas: {fileID: 0}
-  Paused: 0
+  consumption: 0
+  consumptionSpeed: 8
+  vitessePuits: 15
+  valeurPotion: 25
 --- !u!114 &1223459138
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1500,6 +1502,7 @@ MonoBehaviour:
   aiguille: {fileID: 1592241498}
   timer: 0
   globalStopWatchSpeed: 0.5
+  manaScript: {fileID: 1223459137}
 --- !u!1 &1915652929
 GameObject:
   m_ObjectHideFlags: 0

@@ -88,7 +88,7 @@ public class ManaScript : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.tag == "PuitMana")
+        if (other.gameObject.tag == "PuitsMana")
         {
             Debug.Log("Puits de Mana");
             mana.MyCurrentValue += Time.deltaTime * vitessePuits;

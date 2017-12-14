@@ -21,6 +21,7 @@ public class DockManagementScript : MonoBehaviour {
 	public ManaScript manaScript;
 
 	int currentState;
+
 	// Use this for initialization
 	void Start () {
 		currentState = (int)states.play;
