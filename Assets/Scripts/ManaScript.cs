@@ -11,7 +11,7 @@ public class ManaScript : MonoBehaviour
     private float currentValue;
     private float initMana = 100;
     public ManaScript mana;
-    private bool consumption;
+    public bool consumption;
     public float consumptionSpeed = 8;
     public float vitessePuits = 15;
     public float valeurPotion = 25;
@@ -57,36 +57,32 @@ public class ManaScript : MonoBehaviour
     {
         content.fillAmount = currentFill;
 
-        if (Input.GetKeyDown(KeyCode.I))        //Quand on appuie sur I, on consomme/deconsomme
-        {
-            consumption = !consumption;
-
-        }
         if (consumption == true)
         {
-            Debug.Log("on consomme");
+            //Debug.Log("on consomme");
             mana.MyCurrentValue -= Time.deltaTime * consumptionSpeed;
         }
 
         if (mana.MyCurrentValue <= 0)
         {
-            Debug.Log("Plus de Mana");
+            //Debug.Log("Plus de Mana");
             consumption = false;
         }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "PuitMana")
+        if (other.gameObject.tag == "PuitsMana")
         {
-            Debug.Log("Puit de Mana");
+            Debug.Log("Puits de Mana");
             mana.MyCurrentValue += Time.deltaTime * vitessePuits;
         }
 
         if (other.gameObject.tag == "Potion")
         {
-            Debug.Log("Potion ramassee");
+            Debug.Log("Potion ramassée");
             mana.MyCurrentValue += valeurPotion;
+			Destroy (other.gameObject);
         }
     }
 
@@ -101,7 +97,7 @@ public class ManaScript : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.tag == "PuitMana")
+        if (other.gameObject.tag == "PuitsMana")
         {
             Debug.Log("Sortie Puits de Mana");
             mana.MyCurrentValue = mana.MyCurrentValue;
