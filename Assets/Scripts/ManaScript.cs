@@ -10,7 +10,6 @@ public class ManaScript : MonoBehaviour
     public float MyMaxValue { get; set; }
     private float currentValue;
     private float initMana = 100;
-    public ManaScript mana;
     public bool consumption;
     public float consumptionSpeed = 8;
     public float vitessePuits = 15;
@@ -46,7 +45,7 @@ public class ManaScript : MonoBehaviour
     private void Start()
     {
         content = GetComponent<Image>();
-        mana.Initialize(initMana, initMana);
+        Initialize(initMana, initMana);
         consumption = false;
 
     }
@@ -60,10 +59,10 @@ public class ManaScript : MonoBehaviour
         if (consumption == true)
         {
             //Debug.Log("on consomme");
-            mana.MyCurrentValue -= Time.deltaTime * consumptionSpeed;
+            MyCurrentValue -= Time.deltaTime * consumptionSpeed;
         }
 
-        if (mana.MyCurrentValue <= 0)
+        if (MyCurrentValue <= 0)
         {
             //Debug.Log("Plus de Mana");
             consumption = false;
@@ -74,14 +73,14 @@ public class ManaScript : MonoBehaviour
     {
         if (other.gameObject.tag == "PuitsMana")
         {
-            Debug.Log("Puits de Mana");
-            mana.MyCurrentValue += Time.deltaTime * vitessePuits;
+            //Debug.Log("Puits de Mana");
+            MyCurrentValue += Time.deltaTime * vitessePuits;
         }
 
         if (other.gameObject.tag == "Potion")
         {
-            Debug.Log("Potion ramassée");
-            mana.MyCurrentValue += valeurPotion;
+            //Debug.Log("Potion ramassée");
+            MyCurrentValue += valeurPotion;
 			Destroy (other.gameObject);
         }
     }
@@ -90,19 +89,11 @@ public class ManaScript : MonoBehaviour
     {
         if (other.gameObject.tag == "PuitsMana")
         {
-            Debug.Log("Puits de Mana");
-            mana.MyCurrentValue += Time.deltaTime * vitessePuits;
+            //Debug.Log("Puits de Mana");
+            MyCurrentValue += Time.deltaTime * vitessePuits;
         }
     }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject.tag == "PuitsMana")
-        {
-            Debug.Log("Sortie Puits de Mana");
-            mana.MyCurrentValue = mana.MyCurrentValue;
-        }
-    }
+		
 
     public void Initialize(float currentValue, float maxValue)
     {
