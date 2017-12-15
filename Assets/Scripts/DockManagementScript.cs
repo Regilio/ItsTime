@@ -24,8 +24,8 @@ public class DockManagementScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		currentState = (int)states.play;
-		SetColorsAndSpeed ();
+		StartCoroutine (TimeManagement ());
+		Play ();
 		RotationA = new Vector3(0, 0, 360);
 		RotationB = new Vector3(0, 0, 0);
 	}
@@ -45,17 +45,24 @@ public class DockManagementScript : MonoBehaviour {
 			Forward ();
 		}
 
-		if (currentStopWatchSpeed > 0) {
+	}
 
-			timer += Time.deltaTime * currentStopWatchSpeed;
-			aiguille.rectTransform.localEulerAngles = Vector3.Lerp(RotationA, RotationB, timer);
-			if (timer > 1)
-				timer = 0;
-		}else if (currentStopWatchSpeed < 0) {
-			timer -= Time.deltaTime * -currentStopWatchSpeed;
-			aiguille.rectTransform.localEulerAngles = Vector3.Lerp(RotationA, RotationB, timer);
-			if (timer <= 0)
-				timer = 1;
+	IEnumerator TimeManagement(){
+		while (true) {
+
+			if (currentStopWatchSpeed > 0) {
+
+				timer += Time.deltaTime * currentStopWatchSpeed;
+				aiguille.rectTransform.localEulerAngles = Vector3.Lerp(RotationA, RotationB, timer);
+				if (timer > 1)
+					timer = 0;
+			}else if (currentStopWatchSpeed < 0) {
+				timer -= Time.deltaTime * -currentStopWatchSpeed;
+				aiguille.rectTransform.localEulerAngles = Vector3.Lerp(RotationA, RotationB, timer);
+				if (timer <= 0)
+					timer = 1;
+			}
+			yield return 0;
 		}
 	}
 
