@@ -6,11 +6,11 @@ public class ScriptRotative : MonoBehaviour {
 
     Vector3 RotationA;
     Vector3 RotationB;
-    float timer = 0;
-    float speed;
-    float playSpeed = 0.05f;
+   public float timer = 0;
+    public float speed;
+    public float playSpeed = 0.05f;
+    public float forwardSpeed = 0.1f;
 
-    float forwardSpeed = 0.1f;
     public DockManagementScript dmScript;
 
     int lastFrameState;
@@ -76,7 +76,7 @@ public class ScriptRotative : MonoBehaviour {
         while (true)
         {
             timer -= Time.deltaTime * speed;
-            Debug.Log(timer);
+            //Debug.Log(timer);
             transform.localEulerAngles = Vector3.Lerp(RotationA, RotationB, timer);
             if (timer < 0)
                 timer = 1;

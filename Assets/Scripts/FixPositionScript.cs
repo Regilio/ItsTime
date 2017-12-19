@@ -16,9 +16,6 @@ public class FixPositionScript : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             
-     
-            Debug.Log("Contact");
-          
             other.transform.SetParent(transform);
            
 
@@ -29,9 +26,7 @@ public class FixPositionScript : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-
-       
-            Debug.Log("sortie");
+            
           other.transform.SetParent(null);
        
 

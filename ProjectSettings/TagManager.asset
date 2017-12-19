@@ -8,6 +8,7 @@ TagManager:
   - PuitMana
   - Potion
   - Platform
+  - Obstacle
   layers:
   - Default
   - TransparentFX
