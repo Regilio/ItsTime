@@ -10,7 +10,7 @@ public class DockManagementScript : MonoBehaviour {
 	public Image playImg;
 	public Image forwardImg;
 	public Image aiguille;
-	enum states{backwards,pause,play,forward};
+	public enum states{backwards,pause,play,forward};
 
 	Vector3 RotationA;
 	Vector3 RotationB;
@@ -20,7 +20,7 @@ public class DockManagementScript : MonoBehaviour {
 
 	public ManaScript manaScript;
 
-	int currentState;
+	public int currentState;
 
 	// Use this for initialization
 	void Start () {
