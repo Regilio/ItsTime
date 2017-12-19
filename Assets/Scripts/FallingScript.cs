@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FallingScript : MonoBehaviour
 {
-
+	public FixPositionScript fixPosScript;
     public Vector3 EndPosition;
     public Vector3 StartPosition;
 
@@ -21,7 +21,7 @@ public class FallingScript : MonoBehaviour
 
     void Start()
     {
-
+		fixPosScript = GetComponentInChildren<FixPositionScript> ();
         speed = playSpeed;
         StartCoroutine(FallingCoroutine());
         dmScript = GameObject.Find("Dock").GetComponent<DockManagementScript>();
@@ -106,8 +106,10 @@ public class FallingScript : MonoBehaviour
             timer += Time.deltaTime * speed;
 
             transform.localPosition = Vector3.Lerp(StartPosition, EndPosition, timer);
-            if (timer / speed >= depopTimer)
-                Destroy(gameObject);
+			if (timer / speed >= depopTimer) {
+				fixPosScript.removeSon ();
+				Destroy(gameObject);
+			}
             yield return 0;
         }
 
@@ -122,8 +124,10 @@ public class FallingScript : MonoBehaviour
             timer += Time.deltaTime * speed;
 
             transform.localPosition = Vector3.Lerp(StartPosition, EndPosition, timer);
-            if (timer / speed >= depopTimer / 2.0f)
-                Destroy(gameObject);
+			if (timer / speed >= depopTimer / 2.0f){
+				fixPosScript.removeSon ();
+				Destroy(gameObject);
+			}
             yield return 0;
         }
 
@@ -136,8 +140,10 @@ public class FallingScript : MonoBehaviour
             timer += Time.deltaTime * speed;
             transform.localPosition = Vector3.Lerp(EndPosition, StartPosition, timer);
            
-            if (timer / speed >= depopTimer)
-                Destroy(gameObject);
+			if (timer / speed >= depopTimer){
+				fixPosScript.removeSon ();
+				Destroy(gameObject);
+			}
             yield return 0;
         }
     }

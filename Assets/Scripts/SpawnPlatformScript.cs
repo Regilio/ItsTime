@@ -68,10 +68,10 @@ public class SpawnPlatformScript : MonoBehaviour
     {
         if (enHaut)
         {
-            gameObject.transform.position = pos1.position;
+			gameObject.transform.position = pos1.position;
         }else
         {
-            gameObject.transform.position = pos2.position;
+			gameObject.transform.position = pos2.position;
         }
     }
 
@@ -85,7 +85,10 @@ public class SpawnPlatformScript : MonoBehaviour
             {
                 //Debug.Log(transform.position);
                 Instantiate(SpawnPrefab, transform.position, Quaternion.identity);
-                GameObject newPlateform = Instantiate(SpawnPrefab, transform.position, Quaternion.identity);
+				GameObject newPlateform = Instantiate(SpawnPrefab, transform.localPosition, Quaternion.identity);
+				newPlateform.GetComponent<FallingScript> ().StartPosition = pos1.position;
+				newPlateform.GetComponent<FallingScript> ().EndPosition = pos2.position;
+
                 newPlateform.GetComponent<FallingScript>().lastFrameState = (int)dmScript.currentState;
 
                 timer = 0;

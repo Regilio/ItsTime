@@ -4,12 +4,8 @@ using UnityEngine;
 
 public class FixPositionScript : MonoBehaviour
 {
-    
+	GameObject currentSon = null;
 
-    void Update()
-    {
-        
-    }
 
     void OnTriggerEnter(Collider other)
     {
@@ -17,7 +13,7 @@ public class FixPositionScript : MonoBehaviour
         {
             
             other.transform.SetParent(transform);
-           
+			currentSon = other.gameObject;
 
         }
     }
@@ -26,12 +22,15 @@ public class FixPositionScript : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            
-          other.transform.SetParent(null);
-       
-
-        }
+			removeSon();
+		}
     }
 
+	public void removeSon(){
+		if (currentSon != null) {
+			currentSon.transform.SetParent (null);
+			currentSon = null;
+		}
+	}
 
 }
