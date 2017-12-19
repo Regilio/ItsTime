@@ -6,6 +6,7 @@ TagManager:
   tags:
   - PuitMana
   - Potion
+  - Ground
   layers:
   - Default
   - TransparentFX
