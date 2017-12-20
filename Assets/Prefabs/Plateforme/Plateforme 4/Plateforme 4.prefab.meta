@@ -1,6 +1,10 @@
 fileFormatVersion: 2
 guid: 41e3643f7cd67fb47b31312e85b64db2
+<<<<<<< HEAD
 timeCreated: 1513714229
+=======
+timeCreated: 1513768499
+>>>>>>> Regilio
 licenseType: Free
 NativeFormatImporter:
   externalObjects: {}
