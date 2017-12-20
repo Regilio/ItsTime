@@ -9,32 +9,19 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-<<<<<<< HEAD
-  m_RootGameObject: {fileID: 1819781373504164}
-  m_IsPrefabParent: 1
---- !u!1 &1010126957194262
-=======
   m_RootGameObject: {fileID: 1644049292608330}
   m_IsPrefabParent: 1
 --- !u!1 &1049409160340762
->>>>>>> Regilio
 GameObject:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-<<<<<<< HEAD
-  - component: {fileID: 4320165296638894}
-  - component: {fileID: 33656128367746928}
-  - component: {fileID: 65428105968992906}
-  - component: {fileID: 23610517507613890}
-=======
   - component: {fileID: 4726509005396978}
   - component: {fileID: 33229783998721042}
   - component: {fileID: 65178687959904200}
   - component: {fileID: 23554417853633766}
->>>>>>> Regilio
   m_Layer: 0
   m_Name: Mur
   m_TagString: Untagged
@@ -42,40 +29,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
-<<<<<<< HEAD
---- !u!1 &1382438237931100
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 4890090408704196}
-  - component: {fileID: 33780197591181298}
-  - component: {fileID: 65023148566460078}
-  - component: {fileID: 23124847509654502}
-  m_Layer: 0
-  m_Name: StartLevelFloor
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &1429002431789306
-=======
 --- !u!1 &1158185028620570
->>>>>>> Regilio
 GameObject:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-<<<<<<< HEAD
-  - component: {fileID: 4142209673848912}
-  - component: {fileID: 65407603544095872}
-  - component: {fileID: 114616362044158954}
-=======
   - component: {fileID: 4959831241189176}
   - component: {fileID: 65928636578998820}
   m_Layer: 0
@@ -96,35 +56,22 @@ GameObject:
   - component: {fileID: 33376079338302640}
   - component: {fileID: 65538071251586762}
   - component: {fileID: 23933002686804906}
->>>>>>> Regilio
   m_Layer: 0
-  m_Name: Collider
+  m_Name: Mur
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
-<<<<<<< HEAD
---- !u!1 &1480937629956306
-=======
 --- !u!1 &1218852861552652
->>>>>>> Regilio
 GameObject:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-<<<<<<< HEAD
-  - component: {fileID: 4477748678715226}
-  - component: {fileID: 33923346982551606}
-  - component: {fileID: 135015574256786708}
-  - component: {fileID: 23750929810316066}
-  - component: {fileID: 54985039970034126}
-=======
   - component: {fileID: 4351678559322302}
   - component: {fileID: 65576913073318884}
->>>>>>> Regilio
   m_Layer: 0
   m_Name: Invisible Wall
   m_TagString: Untagged
@@ -132,33 +79,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
-<<<<<<< HEAD
---- !u!1 &1533441729691318
-=======
 --- !u!1 &1233894574712396
->>>>>>> Regilio
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-<<<<<<< HEAD
-  - component: {fileID: 4847295979564604}
-  - component: {fileID: 65294307424229188}
-=======
   - component: {fileID: 4510068722013528}
->>>>>>> Regilio
   m_Layer: 0
-  m_Name: InvisibleWall (3)
+  m_Name: BlockBall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
-<<<<<<< HEAD
---- !u!1 &1619644019757668
-=======
 --- !u!1 &1243596784870240
 GameObject:
   m_ObjectHideFlags: 1
@@ -178,24 +113,16 @@ GameObject:
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &1262463982640528
->>>>>>> Regilio
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-<<<<<<< HEAD
-  - component: {fileID: 4454242849357084}
-  - component: {fileID: 33430499154360708}
-  - component: {fileID: 65495915938321840}
-  - component: {fileID: 23323985179357134}
-=======
   - component: {fileID: 4555973991664050}
   - component: {fileID: 33244730463259668}
   - component: {fileID: 65290384624567710}
   - component: {fileID: 23491779859623984}
->>>>>>> Regilio
   m_Layer: 0
   m_Name: StartLevelFloor
   m_TagString: Untagged
@@ -203,28 +130,17 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
-<<<<<<< HEAD
---- !u!1 &1622973133016696
-=======
 --- !u!1 &1347645998200200
->>>>>>> Regilio
 GameObject:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-<<<<<<< HEAD
-  - component: {fileID: 4110050931329472}
-  - component: {fileID: 33401711106264398}
-  - component: {fileID: 65573386092901514}
-  - component: {fileID: 23619346091628036}
-=======
   - component: {fileID: 4068593665673126}
   - component: {fileID: 33360797529324930}
   - component: {fileID: 65096669417233884}
   - component: {fileID: 23509903503062094}
->>>>>>> Regilio
   m_Layer: 0
   m_Name: Mur
   m_TagString: Untagged
@@ -232,67 +148,40 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
-<<<<<<< HEAD
---- !u!1 &1648191174043544
-=======
 --- !u!1 &1406375970654912
->>>>>>> Regilio
 GameObject:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-<<<<<<< HEAD
-  - component: {fileID: 4058084465871024}
-  - component: {fileID: 33973486021757608}
-  - component: {fileID: 65065867464329146}
-  - component: {fileID: 23252669435807980}
-  - component: {fileID: 54300266337389354}
-  m_Layer: 0
-  m_Name: FallingAnglePlatform
-=======
   - component: {fileID: 4994506575348890}
   - component: {fileID: 65071205548485592}
   m_Layer: 0
   m_Name: Invisible Wall
->>>>>>> Regilio
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
-<<<<<<< HEAD
---- !u!1 &1694934003641464
-=======
 --- !u!1 &1418254765800298
->>>>>>> Regilio
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-<<<<<<< HEAD
-  - component: {fileID: 4733566669447398}
-  m_Layer: 0
-  m_Name: BlockBall
-=======
   - component: {fileID: 4218641629633798}
   - component: {fileID: 33665091493385414}
   - component: {fileID: 65041812656298778}
   - component: {fileID: 23091703508077608}
   m_Layer: 0
   m_Name: EndLevelFloor
->>>>>>> Regilio
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
-<<<<<<< HEAD
---- !u!1 &1819781373504164
-=======
 --- !u!1 &1511552591069226
 GameObject:
   m_ObjectHideFlags: 1
@@ -310,18 +199,13 @@ GameObject:
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &1644049292608330
->>>>>>> Regilio
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-<<<<<<< HEAD
-  - component: {fileID: 4932554920377850}
-=======
   - component: {fileID: 4895389615421764}
->>>>>>> Regilio
   m_Layer: 0
   m_Name: Plateforme 4
   m_TagString: Untagged
@@ -329,59 +213,16 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
-<<<<<<< HEAD
---- !u!1 &1832760327424000
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 4295770899674750}
-  - component: {fileID: 65917340705021332}
-  m_Layer: 0
-  m_Name: InvisibleWall (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &1871614768128274
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 4004735328031338}
-  - component: {fileID: 65291700146780606}
-  m_Layer: 0
-  m_Name: InvisibleWall
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &1873152162979002
-=======
 --- !u!1 &1666108091977012
->>>>>>> Regilio
 GameObject:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-<<<<<<< HEAD
-  - component: {fileID: 4547411618248534}
-  - component: {fileID: 33428065694303686}
-  - component: {fileID: 65646918709781498}
-  - component: {fileID: 23180599502803660}
-=======
   - component: {fileID: 4476817676945124}
   - component: {fileID: 65486896122499080}
   - component: {fileID: 114220485951849048}
->>>>>>> Regilio
   m_Layer: 0
   m_Name: Collider
   m_TagString: Untagged
@@ -389,41 +230,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
-<<<<<<< HEAD
---- !u!1 &1920860620498828
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 4791613960224024}
-  - component: {fileID: 65994630305744050}
-  m_Layer: 0
-  m_Name: InvisibleWall (2)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &1967054890549362
-=======
 --- !u!1 &1741984698966158
->>>>>>> Regilio
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-<<<<<<< HEAD
-  - component: {fileID: 4388587957768334}
-  - component: {fileID: 33851262879500966}
-  - component: {fileID: 65753725048744934}
-  - component: {fileID: 23738894888299468}
-  m_Layer: 0
-  m_Name: Mur
-=======
   - component: {fileID: 4201299982651746}
   - component: {fileID: 33574432776941764}
   - component: {fileID: 135490631308087094}
@@ -450,82 +263,29 @@ GameObject:
   - component: {fileID: 54784501886547426}
   m_Layer: 0
   m_Name: FallingAnglePlatform
->>>>>>> Regilio
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
-<<<<<<< HEAD
---- !u!4 &4004735328031338
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1871614768128274}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 17.09, y: -0.31, z: -16.6}
-  m_LocalScale: {x: 1, y: 5, z: 15}
-  m_Children: []
-  m_Father: {fileID: 4932554920377850}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4058084465871024
-=======
 --- !u!4 &4068593665673126
->>>>>>> Regilio
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-<<<<<<< HEAD
-  m_GameObject: {fileID: 1648191174043544}
-  m_LocalRotation: {x: 0.9659258, y: -0, z: -0, w: 0.2588191}
-  m_LocalPosition: {x: 14.147395, y: 22.448269, z: 3.9534912}
-  m_LocalScale: {x: 5, y: 0.5, z: 10}
-  m_Children: []
-  m_Father: {fileID: 4932554920377850}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 150, y: 0, z: 0}
---- !u!4 &4110050931329472
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1622973133016696}
-=======
   m_GameObject: {fileID: 1347645998200200}
->>>>>>> Regilio
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0.4885714, y: 1.3900003, z: 0.0014288765}
   m_LocalScale: {x: 4, y: 0.0714286, z: 1}
   m_Children: []
-<<<<<<< HEAD
-  m_Father: {fileID: 4733566669447398}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
---- !u!4 &4142209673848912
-=======
   m_Father: {fileID: 4510068722013528}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!4 &4201299982651746
->>>>>>> Regilio
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-<<<<<<< HEAD
-  m_GameObject: {fileID: 1429002431789306}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.026, y: 0.7452521, z: 0.339}
-  m_LocalScale: {x: 1, y: 0.4, z: 0.20000002}
-  m_Children: []
-  m_Father: {fileID: 4890090408704196}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4295770899674750
-=======
   m_GameObject: {fileID: 1741984698966158}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 14.577395, y: 32.44827, z: 6.0534897}
@@ -535,22 +295,10 @@ Transform:
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4218641629633798
->>>>>>> Regilio
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-<<<<<<< HEAD
-  m_GameObject: {fileID: 1832760327424000}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.37, y: -0.6, z: -16.599998}
-  m_LocalScale: {x: 1, y: 5, z: 15}
-  m_Children: []
-  m_Father: {fileID: 4932554920377850}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4320165296638894
-=======
   m_GameObject: {fileID: 1418254765800298}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 14.147395, y: 3.448269, z: 17.443497}
@@ -562,35 +310,10 @@ Transform:
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4351678559322302
->>>>>>> Regilio
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-<<<<<<< HEAD
-  m_GameObject: {fileID: 1010126957194262}
-  m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0.4885714, y: 1.3900003, z: 0.0014288765}
-  m_LocalScale: {x: 4, y: 0.0714286, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4733566669447398}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
---- !u!4 &4388587957768334
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1967054890549362}
-  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0.007142884, y: 1.9200001, z: 0.422857}
-  m_LocalScale: {x: 1, y: 0.1428572, z: 3}
-  m_Children: []
-  m_Father: {fileID: 4733566669447398}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!4 &4454242849357084
-=======
   m_GameObject: {fileID: 1218852861552652}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.57, y: 1.26, z: 0}
@@ -600,22 +323,10 @@ Transform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4476817676945124
->>>>>>> Regilio
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-<<<<<<< HEAD
-  m_GameObject: {fileID: 1619644019757668}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 14.147395, y: 3.448269, z: 17.443497}
-  m_LocalScale: {x: 7, y: 2, z: 15}
-  m_Children: []
-  m_Father: {fileID: 4932554920377850}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4477748678715226
-=======
   m_GameObject: {fileID: 1666108091977012}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.02, y: 0.7452521, z: 0.39241537}
@@ -625,22 +336,10 @@ Transform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4510068722013528
->>>>>>> Regilio
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-<<<<<<< HEAD
-  m_GameObject: {fileID: 1480937629956306}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 14.577395, y: 32.44827, z: 6.0534897}
-  m_LocalScale: {x: 6, y: 6, z: 6}
-  m_Children: []
-  m_Father: {fileID: 4932554920377850}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4547411618248534
-=======
   m_GameObject: {fileID: 1233894574712396}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 14.147395, y: -8.911732, z: -5.236511}
@@ -654,22 +353,10 @@ Transform:
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4555973991664050
->>>>>>> Regilio
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-<<<<<<< HEAD
-  m_GameObject: {fileID: 1873152162979002}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4733566669447398}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4733566669447398
-=======
   m_GameObject: {fileID: 1262463982640528}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 14.147395, y: -7.3117313, z: -16.646507}
@@ -682,39 +369,10 @@ Transform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4582804948421338
->>>>>>> Regilio
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-<<<<<<< HEAD
-  m_GameObject: {fileID: 1694934003641464}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 14.147395, y: -8.911732, z: -5.236511}
-  m_LocalScale: {x: 7, y: 1, z: 7}
-  m_Children:
-  - {fileID: 4547411618248534}
-  - {fileID: 4388587957768334}
-  - {fileID: 4320165296638894}
-  - {fileID: 4110050931329472}
-  m_Father: {fileID: 4932554920377850}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4791613960224024
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1920860620498828}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 17.76, y: 6.620001, z: 17.09}
-  m_LocalScale: {x: 1, y: 5, z: 15}
-  m_Children: []
-  m_Father: {fileID: 4932554920377850}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4847295979564604
-=======
   m_GameObject: {fileID: 1511552591069226}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.53, y: 0.73000014, z: 0}
@@ -724,22 +382,10 @@ Transform:
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4726509005396978
->>>>>>> Regilio
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-<<<<<<< HEAD
-  m_GameObject: {fileID: 1533441729691318}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.48, y: 6.33, z: 16.43}
-  m_LocalScale: {x: 1, y: 5, z: 15}
-  m_Children: []
-  m_Father: {fileID: 4932554920377850}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4890090408704196
-=======
   m_GameObject: {fileID: 1049409160340762}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 0.007142884, y: 1.9200001, z: 0.422857}
@@ -762,23 +408,10 @@ Transform:
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!4 &4895389615421764
->>>>>>> Regilio
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-<<<<<<< HEAD
-  m_GameObject: {fileID: 1382438237931100}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 14.147395, y: -7.3117313, z: -16.646507}
-  m_LocalScale: {x: 5, y: 10, z: 15}
-  m_Children:
-  - {fileID: 4142209673848912}
-  m_Father: {fileID: 4932554920377850}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4932554920377850
-=======
   m_GameObject: {fileID: 1644049292608330}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.517395, y: 17.551731, z: 117.04651}
@@ -793,31 +426,10 @@ Transform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4937963780480602
->>>>>>> Regilio
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-<<<<<<< HEAD
-  m_GameObject: {fileID: 1819781373504164}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.517395, y: 17.551731, z: 117.04651}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 4004735328031338}
-  - {fileID: 4295770899674750}
-  - {fileID: 4890090408704196}
-  - {fileID: 4733566669447398}
-  - {fileID: 4454242849357084}
-  - {fileID: 4477748678715226}
-  - {fileID: 4058084465871024}
-  - {fileID: 4791613960224024}
-  - {fileID: 4847295979564604}
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &23124847509654502
-=======
   m_GameObject: {fileID: 1243596784870240}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -866,16 +478,11 @@ Transform:
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &23091703508077608
->>>>>>> Regilio
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-<<<<<<< HEAD
-  m_GameObject: {fileID: 1382438237931100}
-=======
   m_GameObject: {fileID: 1418254765800298}
->>>>>>> Regilio
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -904,62 +511,12 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-<<<<<<< HEAD
---- !u!23 &23180599502803660
-=======
 --- !u!23 &23316882079325280
->>>>>>> Regilio
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-<<<<<<< HEAD
-  m_GameObject: {fileID: 1873152162979002}
-=======
   m_GameObject: {fileID: 1775956492500342}
->>>>>>> Regilio
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 1
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-<<<<<<< HEAD
---- !u!23 &23252669435807980
-=======
---- !u!23 &23491779859623984
->>>>>>> Regilio
-MeshRenderer:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-<<<<<<< HEAD
-  m_GameObject: {fileID: 1648191174043544}
-=======
-  m_GameObject: {fileID: 1262463982640528}
->>>>>>> Regilio
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -988,20 +545,46 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-<<<<<<< HEAD
---- !u!23 &23323985179357134
-=======
+--- !u!23 &23491779859623984
+MeshRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1262463982640528}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
 --- !u!23 &23509903503062094
->>>>>>> Regilio
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-<<<<<<< HEAD
-  m_GameObject: {fileID: 1619644019757668}
-=======
   m_GameObject: {fileID: 1347645998200200}
->>>>>>> Regilio
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -1030,20 +613,12 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-<<<<<<< HEAD
---- !u!23 &23610517507613890
-=======
 --- !u!23 &23554417853633766
->>>>>>> Regilio
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-<<<<<<< HEAD
-  m_GameObject: {fileID: 1010126957194262}
-=======
   m_GameObject: {fileID: 1049409160340762}
->>>>>>> Regilio
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -1072,20 +647,12 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-<<<<<<< HEAD
---- !u!23 &23619346091628036
-=======
 --- !u!23 &23865398760668672
->>>>>>> Regilio
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-<<<<<<< HEAD
-  m_GameObject: {fileID: 1622973133016696}
-=======
   m_GameObject: {fileID: 1243596784870240}
->>>>>>> Regilio
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -1114,20 +681,12 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-<<<<<<< HEAD
---- !u!23 &23738894888299468
-=======
 --- !u!23 &23933002686804906
->>>>>>> Regilio
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-<<<<<<< HEAD
-  m_GameObject: {fileID: 1967054890549362}
-=======
   m_GameObject: {fileID: 1167763725042086}
->>>>>>> Regilio
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -1156,20 +715,12 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-<<<<<<< HEAD
---- !u!23 &23750929810316066
-=======
 --- !u!23 &23937676040743680
->>>>>>> Regilio
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-<<<<<<< HEAD
-  m_GameObject: {fileID: 1480937629956306}
-=======
   m_GameObject: {fileID: 1741984698966158}
->>>>>>> Regilio
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -1198,124 +749,68 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-<<<<<<< HEAD
---- !u!33 &33401711106264398
-=======
 --- !u!33 &33229783998721042
->>>>>>> Regilio
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-<<<<<<< HEAD
-  m_GameObject: {fileID: 1622973133016696}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!33 &33428065694303686
-=======
   m_GameObject: {fileID: 1049409160340762}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &33244730463259668
->>>>>>> Regilio
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-<<<<<<< HEAD
-  m_GameObject: {fileID: 1873152162979002}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!33 &33430499154360708
-=======
   m_GameObject: {fileID: 1262463982640528}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &33360797529324930
->>>>>>> Regilio
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-<<<<<<< HEAD
-  m_GameObject: {fileID: 1619644019757668}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!33 &33656128367746928
-=======
   m_GameObject: {fileID: 1347645998200200}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &33376079338302640
->>>>>>> Regilio
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-<<<<<<< HEAD
-  m_GameObject: {fileID: 1010126957194262}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!33 &33780197591181298
-=======
   m_GameObject: {fileID: 1167763725042086}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &33574432776941764
->>>>>>> Regilio
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-<<<<<<< HEAD
-  m_GameObject: {fileID: 1382438237931100}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!33 &33851262879500966
-=======
   m_GameObject: {fileID: 1741984698966158}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &33665091493385414
->>>>>>> Regilio
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-<<<<<<< HEAD
-  m_GameObject: {fileID: 1967054890549362}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!33 &33923346982551606
-=======
   m_GameObject: {fileID: 1418254765800298}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &33665714787942992
->>>>>>> Regilio
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-<<<<<<< HEAD
-  m_GameObject: {fileID: 1480937629956306}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!33 &33973486021757608
-=======
   m_GameObject: {fileID: 1243596784870240}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &33850776400674700
->>>>>>> Regilio
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-<<<<<<< HEAD
-  m_GameObject: {fileID: 1648191174043544}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!54 &54300266337389354
-=======
   m_GameObject: {fileID: 1775956492500342}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!54 &54784501886547426
->>>>>>> Regilio
 Rigidbody:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-<<<<<<< HEAD
-  m_GameObject: {fileID: 1648191174043544}
-=======
   m_GameObject: {fileID: 1775956492500342}
->>>>>>> Regilio
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -1325,20 +820,12 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
-<<<<<<< HEAD
---- !u!54 &54985039970034126
-=======
 --- !u!54 &54984544207222898
->>>>>>> Regilio
 Rigidbody:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-<<<<<<< HEAD
-  m_GameObject: {fileID: 1480937629956306}
-=======
   m_GameObject: {fileID: 1741984698966158}
->>>>>>> Regilio
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -1348,217 +835,102 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
-<<<<<<< HEAD
---- !u!65 &65023148566460078
-=======
 --- !u!65 &65041812656298778
->>>>>>> Regilio
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-<<<<<<< HEAD
-  m_GameObject: {fileID: 1382438237931100}
-=======
   m_GameObject: {fileID: 1418254765800298}
->>>>>>> Regilio
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
---- !u!65 &65065867464329146
-=======
 --- !u!65 &65045090499167238
->>>>>>> Regilio
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-<<<<<<< HEAD
-  m_GameObject: {fileID: 1648191174043544}
-=======
   m_GameObject: {fileID: 1243596784870240}
->>>>>>> Regilio
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
---- !u!65 &65291700146780606
-=======
 --- !u!65 &65071205548485592
->>>>>>> Regilio
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-<<<<<<< HEAD
-  m_GameObject: {fileID: 1871614768128274}
-=======
   m_GameObject: {fileID: 1406375970654912}
->>>>>>> Regilio
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
---- !u!65 &65294307424229188
-=======
 --- !u!65 &65096669417233884
->>>>>>> Regilio
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-<<<<<<< HEAD
-  m_GameObject: {fileID: 1533441729691318}
-=======
   m_GameObject: {fileID: 1347645998200200}
->>>>>>> Regilio
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
---- !u!65 &65407603544095872
-=======
 --- !u!65 &65178687959904200
->>>>>>> Regilio
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-<<<<<<< HEAD
-  m_GameObject: {fileID: 1429002431789306}
+  m_GameObject: {fileID: 1049409160340762}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &65290384624567710
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1262463982640528}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &65438343155579746
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1775956492500342}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &65486896122499080
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1666108091977012}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!65 &65428105968992906
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1010126957194262}
-=======
-  m_GameObject: {fileID: 1049409160340762}
->>>>>>> Regilio
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
---- !u!65 &65495915938321840
-=======
---- !u!65 &65290384624567710
->>>>>>> Regilio
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-<<<<<<< HEAD
-  m_GameObject: {fileID: 1619644019757668}
-=======
-  m_GameObject: {fileID: 1262463982640528}
->>>>>>> Regilio
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
---- !u!65 &65573386092901514
-=======
---- !u!65 &65438343155579746
->>>>>>> Regilio
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-<<<<<<< HEAD
-  m_GameObject: {fileID: 1622973133016696}
-=======
-  m_GameObject: {fileID: 1775956492500342}
->>>>>>> Regilio
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
---- !u!65 &65646918709781498
-=======
---- !u!65 &65486896122499080
->>>>>>> Regilio
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-<<<<<<< HEAD
-  m_GameObject: {fileID: 1873152162979002}
-=======
-  m_GameObject: {fileID: 1666108091977012}
->>>>>>> Regilio
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!65 &65753725048744934
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1967054890549362}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!65 &65917340705021332
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1832760327424000}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!65 &65994630305744050
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1920860620498828}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
---- !u!114 &114616362044158954
-=======
 --- !u!65 &65538071251586762
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -1608,43 +980,26 @@ BoxCollider:
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &114220485951849048
->>>>>>> Regilio
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-<<<<<<< HEAD
-  m_GameObject: {fileID: 1429002431789306}
-=======
   m_GameObject: {fileID: 1666108091977012}
->>>>>>> Regilio
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 93454851a4cdb4c49800528a6d021d5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
-  Ball: {fileID: 54985039970034126}
-  FallingAnglePlatform: {fileID: 54300266337389354}
-  dmScript: {fileID: 0}
-  lastFrameState: 0
---- !u!135 &135015574256786708
-=======
   Ball: {fileID: 54984544207222898}
   FallingAnglePlatform: {fileID: 54784501886547426}
   dmScript: {fileID: 0}
   lastFrameState: 0
 --- !u!135 &135490631308087094
->>>>>>> Regilio
 SphereCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-<<<<<<< HEAD
-  m_GameObject: {fileID: 1480937629956306}
-=======
   m_GameObject: {fileID: 1741984698966158}
->>>>>>> Regilio
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
