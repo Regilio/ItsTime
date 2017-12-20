@@ -9,26 +9,28 @@ using UnityStandardAssets.CrossPlatformInput;
 
 public class MovementScript : MonoBehaviour {
 
-	public float walkSpeed = 10.0f;
-	public float runSpeed = 20.0f;
+	public float walkSpeed = 8.0f;
+	public float runSpeed = 15.0f;
 
 	Vector3 forward, right;
 	private float moveSpeed;
 
 	public GameObject jumpPoint;
-	public float jumpForce = 50.0f;
+	public float jumpForce = 220.0f;
+
+	List<GameObject> ongoingEvents;
 
 	// Use this for initialization
 	void Start () {
+
+		ongoingEvents = new List<GameObject> ();
 
 		forward = gameObject.transform.forward;
 		forward.y = 0;
 		forward = Vector3.Normalize(forward);
 
-		// -45 degrees from the world x axis
 		right = Quaternion.Euler(new Vector3(0,90,0)) * forward;
 
-		// Initial speed
 		moveSpeed = walkSpeed;
 
 	}
@@ -36,27 +38,28 @@ public class MovementScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+		if (ongoingEvents.Count == 0) {
+			// Movement
+			if (Mathf.Abs(Input.GetAxis ("Horizontal")) > 0.1f || Mathf.Abs(Input.GetAxis ("Vertical")) > 0.1f) {
+				Move();
+			}
 
-		// Movement
-		if (Mathf.Abs(Input.GetAxis ("Horizontal")) > 0.1f || Mathf.Abs(Input.GetAxis ("Vertical")) > 0.1f) {
-			Move();
-		}
+			if (Input.GetKeyDown (KeyCode.LeftShift)) {
+				moveSpeed = runSpeed;
+			}
+			if (Input.GetKeyUp (KeyCode.LeftShift)) {
+				moveSpeed = walkSpeed;
+			}
 
-		if (Input.GetKeyDown (KeyCode.LeftShift)) {
-			moveSpeed = runSpeed;
-		}
-		if (Input.GetKeyUp (KeyCode.LeftShift)) {
-			moveSpeed = walkSpeed;
-		}
+			if (Input.GetKeyDown (KeyCode.Space)) {
 
-		if (Input.GetKeyDown (KeyCode.Space)) {
-
-			Ray ray = new Ray(jumpPoint.transform.position, jumpPoint.transform.forward);
-			RaycastHit hit;
+				Ray ray = new Ray(jumpPoint.transform.position, jumpPoint.transform.forward);
+				RaycastHit hit;
 
 
-			if (Physics.Raycast (ray, out hit, 0.15f)) {
-				gameObject.GetComponent<Rigidbody> ().AddForce (new Vector3 (0, jumpForce, 0));
+				if (Physics.Raycast (ray, out hit, 0.15f)) {
+					gameObject.GetComponent<Rigidbody> ().AddForce (new Vector3 (0, jumpForce, 0));
+				}
 			}
 		}
 
@@ -72,20 +75,27 @@ public class MovementScript : MonoBehaviour {
 			upMovement = forward * (moveSpeed-0.3f*moveSpeed) * Input.GetAxis("Vertical");
 		}
 
-		// Calculate what is forward
 		Vector3 heading = Vector3.Normalize(rightMovement + upMovement);
 
-		// Set new position
 		Vector3 newPosition = transform.position;
 		newPosition += rightMovement;
 		newPosition += upMovement;
 
-		// Smoothly move the new position
 		transform.forward = heading;
 		transform.position = Vector3.Lerp(transform.position, newPosition, Time.deltaTime);
 
 
 	}
+
+	public void addEvent(GameObject UIEvent){
+		ongoingEvents.Add (UIEvent);
+		moveSpeed = walkSpeed;
+	}
+
+	public void removeEvent(GameObject UIEvent){
+		ongoingEvents.Remove (UIEvent);
+	}
+
 /*	public float speed = 1.0f;
 	public float maxSpeed = 5.0f;
 	public float deadZone = 0.1f;

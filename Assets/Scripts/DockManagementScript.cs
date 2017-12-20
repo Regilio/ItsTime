@@ -18,12 +18,20 @@ public class DockManagementScript : MonoBehaviour {
 	public float globalStopWatchSpeed = 1.0f;
 	float currentStopWatchSpeed;
 
-	public ManaScript manaScript;
+	public ManaScript ControllerManaScript;
 
 	public int currentState;
 
+	public bool[] enableButtons = {true, true, true, true};
+
+	List<GameObject> ongoingEvents;
+
+	CanvasGroup canvasGroup;
+
 	// Use this for initialization
 	void Start () {
+		ongoingEvents = new List<GameObject> ();
+		canvasGroup = gameObject.GetComponent<CanvasGroup> ();
 		StartCoroutine (TimeManagement ());
 		Play ();
 		RotationA = new Vector3(0, 0, 360);
@@ -32,17 +40,19 @@ public class DockManagementScript : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyDown (KeyCode.Alpha1)) {
-			Backwards ();
-		}
-		if (Input.GetKeyDown (KeyCode.Alpha2)) {
-			Pause ();
-		}
-		if (Input.GetKeyDown (KeyCode.Alpha3)) {
-			Play ();
-		}
-		if (Input.GetKeyDown (KeyCode.Alpha4)) {
-			Forward ();
+		if (ongoingEvents.Count == 0) {
+			if (Input.GetKeyDown (KeyCode.Alpha1) && enableButtons [0]) {
+				Backwards ();
+			}
+			if (Input.GetKeyDown (KeyCode.Alpha2) && enableButtons [1]) {
+				Pause ();
+			}
+			if (Input.GetKeyDown (KeyCode.Alpha3) && enableButtons [2]) {
+				Play ();
+			}
+			if (Input.GetKeyDown (KeyCode.Alpha4) && enableButtons [3]) {
+				Forward ();
+			}
 		}
 
 	}
@@ -77,22 +87,22 @@ public class DockManagementScript : MonoBehaviour {
 		case (int)states.backwards:
 			backwardsImg.color = Color.white;
 			currentStopWatchSpeed = -0.5f * globalStopWatchSpeed;
-			manaScript.consumption = true;
+			ControllerManaScript.consuming(true);
 			break;
 		case (int)states.pause:
 			pauseImg.color = Color.white;
 			currentStopWatchSpeed = 0;
-			manaScript.consumption = true;
+			ControllerManaScript.consuming(true);
 			break;
 		case (int)states.play:
 			playImg.color = Color.white;
 			currentStopWatchSpeed = 0.5f*globalStopWatchSpeed;
-			manaScript.consumption = false;
+			ControllerManaScript.consuming(false);
 			break;
 		case (int)states.forward:
 			forwardImg.color = Color.white;
 			currentStopWatchSpeed = 1.0f*globalStopWatchSpeed;
-			manaScript.consumption = true;
+			ControllerManaScript.consuming(true);
 			break;
 		}
 	}
@@ -107,7 +117,7 @@ public class DockManagementScript : MonoBehaviour {
 		SetColorsAndSpeed ();
 	}
 
-	void Play(){
+	public void Play(){
 		currentState = (int)states.play;
 		SetColorsAndSpeed ();
 	}
@@ -115,5 +125,35 @@ public class DockManagementScript : MonoBehaviour {
 	void Forward(){
 		currentState = (int)states.forward; 
 		SetColorsAndSpeed ();
+	}
+
+	public void EnableButtons(bool[] buttonBools){
+
+		enableButtons = buttonBools;
+
+		backwardsImg.gameObject.SetActive(enableButtons [0]);
+		pauseImg.gameObject.SetActive(enableButtons [1]);
+		playImg.gameObject.SetActive(enableButtons [2]);
+		forwardImg.gameObject.SetActive(enableButtons [3]);
+
+	}
+
+	public void addEvent(GameObject UIEvent, bool hideDock = true){
+		ongoingEvents.Add (UIEvent);
+		if (hideDock) {
+			canvasGroup.alpha = 0f;
+			canvasGroup.blocksRaycasts = false;
+
+		}
+	}
+
+
+
+	public void removeEvent(GameObject UIEvent){
+		ongoingEvents.Remove (UIEvent);
+		if (ongoingEvents.Count == 0) {
+			canvasGroup.alpha = 1f;
+			canvasGroup.blocksRaycasts = true;
+		}
 	}
 }
