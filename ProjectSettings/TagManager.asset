@@ -5,11 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - RotatePlat
-  - PuitMana
   - Potion
   - Ground
   - Platform
   - Obstacle
+  - PuitsMana
   layers:
   - Default
   - TransparentFX
