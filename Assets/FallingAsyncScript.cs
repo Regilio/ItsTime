@@ -44,7 +44,7 @@ public class FallingAsyncScript : MonoBehaviour
         while (true)
         {   
             timer += Time.deltaTime * speed;
-            Plateforme1.transform.localPosition = Vector3.Lerp(StartPos1.position, EndPos1.position, timer);
+			Plateforme1.transform.position = Vector3.Lerp(StartPos1.position, EndPos1.position, timer);
             if (timer > 1)
                 timer = 0;
             yield return 0;
