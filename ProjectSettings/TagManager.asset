@@ -10,6 +10,7 @@ TagManager:
   - Platform
   - Obstacle
   - PuitsMana
+  - ManaBar
   layers:
   - Default
   - TransparentFX
