@@ -12,6 +12,12 @@ public class DockManagementScript : MonoBehaviour
     public Image forwardImg;
     public Image aiguille;
     public enum states { backwards, pause, play, forward };
+    public AudioClip rewindAudioClip;
+    public AudioClip pauseAudioClip;
+    public AudioClip playAudioClip;
+    public AudioClip forwardAudioClip;
+    public AudioSource audioSource;
+
 
     Vector3 RotationA;
     Vector3 RotationB;
@@ -38,6 +44,7 @@ public class DockManagementScript : MonoBehaviour
         Play();
         RotationA = new Vector3(0, 0, 360);
         RotationB = new Vector3(0, 0, 0);
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -48,18 +55,27 @@ public class DockManagementScript : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Alpha1) && enableButtons[0])
             {
                 Backwards();
+                audioSource.clip = rewindAudioClip;
+                audioSource.Play();
+                
             }
             if (Input.GetKeyDown(KeyCode.Alpha2) && enableButtons[1])
             {
                 Pause();
+                audioSource.clip = pauseAudioClip;
+                audioSource.Play();
             }
             if (Input.GetKeyDown(KeyCode.Alpha3) && enableButtons[2])
             {
                 Play();
+                audioSource.clip = playAudioClip;
+                audioSource.Play();
             }
             if (Input.GetKeyDown(KeyCode.Alpha4) && enableButtons[3])
             {
                 Forward();
+                audioSource.clip = forwardAudioClip;
+                audioSource.Play();
             }
         }
 

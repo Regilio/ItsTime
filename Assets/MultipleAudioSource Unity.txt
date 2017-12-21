@@ -1,0 +1,37 @@
+    public AudioClip rewindAudioClip;
+    public AudioClip pauseAudioClip;
+    public AudioClip playAudioClip;
+    public AudioClip forwardAudioClip;
+    public AudioSource audioSource;
+	
+	
+	   void Update()
+    {
+        EventA
+            {
+                Backwards();
+                audioSource.clip = rewindAudioClip;
+                audioSource.Play();
+                
+            }
+         EventB
+            {
+                Pause();
+                audioSource.clip = pauseAudioClip;
+                audioSource.Play();
+            }
+        EventC
+            {
+                Play();
+                audioSource.clip = playAudioClip;
+                audioSource.Play();
+            }
+        EventD
+            {
+                Forward();
+                audioSource.clip = forwardAudioClip;
+                audioSource.Play();
+            }
+        
+
+    }
