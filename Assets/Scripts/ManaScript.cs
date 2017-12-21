@@ -89,7 +89,7 @@ public class ManaScript : MonoBehaviour
 			currentMana += valeurPotion;
 			if (currentMana > maxMana)
 				currentMana = maxMana;
-			Destroy (other.gameObject);
+			other.gameObject.SetActive (false);
 
 
 			SetMana();

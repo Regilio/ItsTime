@@ -6,8 +6,8 @@ public class PotionDetruiteScript : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player")
-            GameObject.Destroy(gameObject);
+		if (other.gameObject.tag == "Player")
+			gameObject.SetActive (false);
 
     }
 }

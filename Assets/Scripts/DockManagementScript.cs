@@ -27,11 +27,13 @@ public class DockManagementScript : MonoBehaviour {
 	List<GameObject> ongoingEvents;
 
 	CanvasGroup canvasGroup;
+	void Awake(){
+		ongoingEvents = new List<GameObject> ();
+		canvasGroup = gameObject.GetComponent<CanvasGroup> ();
+	}
 
 	// Use this for initialization
 	void Start () {
-		ongoingEvents = new List<GameObject> ();
-		canvasGroup = gameObject.GetComponent<CanvasGroup> ();
 		StartCoroutine (TimeManagement ());
 		Play ();
 		RotationA = new Vector3(0, 0, 360);
