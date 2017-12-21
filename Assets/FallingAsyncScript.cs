@@ -35,10 +35,12 @@ public class FallingAsyncScript : MonoBehaviour
 
     bool spawning = false;
 
+
+
     void Start()
     {
         speed = playSpeed;
-
+      
 
 
         switch (dmScript.currentState)
@@ -201,19 +203,22 @@ public class FallingAsyncScript : MonoBehaviour
     IEnumerator Async()
     {
         StartCoroutine(Falling1());
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(0.5f);
         StartCoroutine(Falling2());
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(0.5f);
         StartCoroutine(Falling3());
         yield return 0;
     }
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.tag == "Player" && !spawning)
         {
             spawning = true;
+           
             StartCoroutine(Async());
+          
         }
+
     }
 }
