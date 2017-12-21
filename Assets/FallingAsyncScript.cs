@@ -19,46 +19,201 @@ public class FallingAsyncScript : MonoBehaviour
 
     public DockManagementScript dmScript;
 
-    public float timer = 0;
+    float timer1 = 0;
+    float timer2 = 0;
+    float timer3 = 0;
+
+    bool timer1Playing = false;
+    bool timer2Playing = false;
+    bool timer3Playing = false;
+
     public float speed;
-    public float playSpeed = 0.5f;
-    public float forwardSpeed = 1f;
+    float playSpeed = 0.15f;
+    float forwardSpeed = 0.5f;
 
     int lastFrameState;
+
+    bool spawning = false;
 
     void Start()
     {
         speed = playSpeed;
 
 
+
+        switch (dmScript.currentState)
+        {
+
+            case (int)DockManagementScript.states.backwards:
+                StopAllCoroutines();
+                speed = playSpeed;
+
+                break;
+            case (int)DockManagementScript.states.pause:
+                speed = 0;
+                StopAllCoroutines();
+                break;
+            case (int)DockManagementScript.states.play:
+                StopAllCoroutines();
+                speed = playSpeed;
+
+                break;
+            case (int)DockManagementScript.states.forward:
+                StopAllCoroutines();
+                speed = forwardSpeed;
+
+                break;
+
+        }
+        lastFrameState = dmScript.currentState;
+
+        StopAllCoroutines();
+
     }
 
     void Update()
     {
+        if (dmScript.currentState != lastFrameState && spawning)
+        {
+            switch (dmScript.currentState)
+            {
 
+                case (int)DockManagementScript.states.backwards:
+                    StopAllCoroutines();
+                    speed = playSpeed;
+                    StartCoroutine(Elevate1());
+                    StartCoroutine(Elevate2());
+                    StartCoroutine(Elevate3());
 
+                    break;
+                case (int)DockManagementScript.states.pause:
+                    speed = 0;
+                    StopAllCoroutines();
+                    break;
+                case (int)DockManagementScript.states.play:
+                    StopAllCoroutines();
+                    speed = playSpeed;
+                    StartCoroutine(Falling1());
+                    StartCoroutine(Falling2());
+                    StartCoroutine(Falling3());
+                    break;
+                case (int)DockManagementScript.states.forward:
+                    StopAllCoroutines();
+                    speed = forwardSpeed;
+
+                    StartCoroutine(Falling1());
+                    StartCoroutine(Falling2());
+                    StartCoroutine(Falling3());
+                    break;
+
+            }
+        }
+        lastFrameState = dmScript.currentState;
     }
 
+
+
+    //boucle pour la plateforme 1 de la plateforme 5
     IEnumerator Falling1()
     {
         while (true)
-        {   
-            timer += Time.deltaTime * speed;
-			Plateforme1.transform.position = Vector3.Lerp(StartPos1.position, EndPos1.position, timer);
-            if (timer > 1)
-                timer = 0;
+        {
+            timer1 += Time.deltaTime * speed;
+            Plateforme1.transform.position = Vector3.Lerp(StartPos1.position, EndPos1.position, timer1);
+            if (timer1 > 1)
+                timer1 = 0;
+
             yield return 0;
         }
+    }
+
+    //boucle pour la plateforme 2 de la plateforme 5
+    IEnumerator Falling2()
+    {
+        while (true)
+        {
+
+            timer2 += Time.deltaTime * speed;
+            Plateforme2.transform.position = Vector3.Lerp(StartPos2.position, EndPos2.position, timer2);
+            if (timer2 > 1)
+                timer2 = 0;
+            yield return 0;
+        }
+    }
+
+    //boucle pour la plateforme 3 de la plateforme 5
+    IEnumerator Falling3()
+    {
+        while (true)
+        {
+
+            timer3 += Time.deltaTime * speed;
+            Plateforme3.transform.position = Vector3.Lerp(StartPos3.position, EndPos3.position, timer3);
+            if (timer3 > 1)
+                timer3 = 0;
+            yield return 0;
+        }
+    }
+
+
+    //boucle pour la plateforme 1 de la plateforme 5
+    IEnumerator Elevate1()
+    {
+        while (true)
+        {
+            timer1 -= Time.deltaTime * speed;
+            Plateforme1.transform.position = Vector3.Lerp(StartPos1.position, EndPos1.position, timer1);
+            if (timer1 < 0)
+                timer1 = 1;
+
+            yield return 0;
+        }
+    }
+
+    //boucle pour la plateforme 2 de la plateforme 5
+    IEnumerator Elevate2()
+    {
+        while (true)
+        {
+
+            timer2 -= Time.deltaTime * speed;
+            Plateforme2.transform.position = Vector3.Lerp(StartPos2.position, EndPos2.position, timer2);
+            if (timer2 < 0)
+                timer2 = 1;
+            yield return 0;
+        }
+    }
+
+    //boucle pour la plateforme 3 de la plateforme 5
+    IEnumerator Elevate3()
+    {
+        while (true)
+        {
+
+            timer3 -= Time.deltaTime * speed;
+            Plateforme3.transform.position = Vector3.Lerp(StartPos3.position, EndPos3.position, timer3);
+            if (timer3 < 0)
+                timer3 = 1;
+            yield return 0;
+        }
+    }
+
+    IEnumerator Async()
+    {
+        StartCoroutine(Falling1());
+        yield return new WaitForSeconds(2);
+        StartCoroutine(Falling2());
+        yield return new WaitForSeconds(2);
+        StartCoroutine(Falling3());
+        yield return 0;
     }
 
     void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
         {
-            StartCoroutine(Falling1());
+            spawning = true;
+            StartCoroutine(Async());
         }
     }
-
-
-
 }
