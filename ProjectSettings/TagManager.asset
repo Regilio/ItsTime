@@ -4,8 +4,13 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - PuitMana
+  - RotatePlat
   - Potion
+  - Ground
+  - Platform
+  - Obstacle
+  - PuitsMana
+  - ManaBar
   layers:
   - Default
   - TransparentFX

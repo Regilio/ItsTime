@@ -5,120 +5,122 @@ using UnityEngine.UI;
 
 public class ManaScript : MonoBehaviour
 {
-    private Image content;
-    private float currentFill;
-    public float MyMaxValue { get; set; }
-    private float currentValue;
-    private float initMana = 100;
-    public ManaScript mana;
-    private bool consumption;
-    public GameObject PauseCanvas;
-    public bool Paused = false;
+	private Image manaBar;
+	private float currentFill;
+	public float maxMana = 100;
+	private float currentMana;
+	public bool consumption;
+	public float consumptionSpeed = 8;
+	public float vitessePuits = 15;
+	public float valeurPotion = 25;
+	public DockManagementScript dockManagementScript;
 
-    public float MyCurrentValue
-    {
-        get
-        {
-            return currentValue;
-        }
+	public Color manaColor;
 
-        set
-        {
-            if (value > MyMaxValue)
-            {
-                currentValue = MyMaxValue;
-            }
-            else if (value < 0)
-            {
-                currentValue = 0;
+	private void Awake()
+	{
+		manaBar = GameObject.FindGameObjectWithTag("ManaBar").GetComponent<Image>();
+	}
 
-            }
-            else
-            {
-                currentValue = value;
-            }
+	private void Start()
+	{
+		currentMana = maxMana;
+		SetMana();
+		consuming(false);
 
-            currentFill = currentValue / MyMaxValue;
-        }
-    }
+	}
 
-    private void Start()
-    {
-        content = GetComponent<Image>();
-        mana.Initialize(initMana, initMana);
-        consumption = false;
-     //   Pause();
-    }
+	public void consuming(bool isConsuming)
+	{
+		consumption = isConsuming;
+		if (consumption == true)
+		{
+			//Debug.Log("on consomme");
+			manaBar.color = manaColor;
+			StopAllCoroutines();
+			StartCoroutine(Consume());
+		}
+		else
+		{
+			manaBar.color = Color.white;
+			StopAllCoroutines();
+		}
+	}
+
+	IEnumerator Consume()
+	{
+		while (true)
+		{
+			currentMana -= Time.deltaTime * consumptionSpeed;
+
+			SetMana();
+
+			if (currentMana <= 0)
+			{
+				//Debug.Log("Plus de Mana");
+				consuming(false);
+				dockManagementScript.Play();
+				currentMana = 0;
+			}
+			yield return 0;
+
+		}
+	}
+
+	private void SetMana() {
+
+		currentFill = currentMana / maxMana;
+		manaBar.fillAmount = currentFill;
+	}
 
 
+	public void ChangeMana(float mana){
+		currentMana = mana;
+		SetMana ();
+	}
 
-    private void Update()
-    {
-        content.fillAmount = currentFill;
+	private void OnTriggerEnter(Collider other)
+	{
 
-        if (Input.GetKeyDown(KeyCode.I))        //Quand on appuie sur I, on consomme/deconsomme
-        {
-            consumption = !consumption;
-          //  Paused = !Paused;
-        //    Pause();
-        }
-        if (consumption == true)
-        {
-            Debug.Log("on consomme");
-            mana.MyCurrentValue -= Time.deltaTime * 8;
+		if (other.gameObject.tag == "Potion")
+		{
 
-            //Mettre ici le changement de couleur de l'ecran pour montrer qu'on a active la pause
-        }
+			//Debug.Log("Potion ramassée");
+			currentMana += valeurPotion;
+			if (currentMana > maxMana)
+				currentMana = maxMana;
+			other.gameObject.SetActive (false);
 
-        if (mana.MyCurrentValue <= 0)
-        {
-            Debug.Log("Plus de Mana");
-            consumption = false;
-        }
-    }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.tag == "PuitMana")
-        {
-            Debug.Log("Puit de Mana");
-            mana.MyCurrentValue += Time.deltaTime * 15;
-        }
+			SetMana();
+		}
+	}
 
-        if (other.gameObject.tag == "Potion")
-        {
-            Debug.Log("Potion ramassee");
-            mana.MyCurrentValue += 25;
-        }
-    }
+	private void OnTriggerStay(Collider other)
+	{
+		if (other.gameObject.tag == "PuitsMana")
+		{
+			dockManagementScript.Play();
+			//Debug.Log("Puits de Mana");
+			currentMana += Time.deltaTime * vitessePuits;
+			manaBar.color = manaColor;
+			if (currentMana > maxMana)
+				currentMana = maxMana;
 
-    private void OnTriggerStay(Collider other)
-    {
-        if (other.gameObject.tag == "PuitMana")
-        {
-            Debug.Log("Puit de Mana");
-            mana.MyCurrentValue += Time.deltaTime * 15;
-        }
-    }
+			SetMana();
+		}
+	}
 
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject.tag == "PuitMana")
-        {
-            Debug.Log("Sortie Puit de Mana");
-            mana.MyCurrentValue = mana.MyCurrentValue;
-        }
-    }
+	private void OnTriggerExit(Collider other)
+	{
+		if (other.gameObject.tag == "PuitsMana")
+		{
+			dockManagementScript.Play();
+			//Debug.Log("Puits de Mana");
+			manaBar.color = Color.white;
+		}
+	}
 
-    public void Initialize(float currentValue, float maxValue)
-    {
-        MyMaxValue = maxValue;
-        MyCurrentValue = currentValue;
-    }
 
-  //  private void Pause()
-   // {
-    //    PauseCanvas.SetActive(Paused);
-    //}
 
 }
