@@ -13,95 +13,73 @@ public class SpeedPlatformScript : MonoBehaviour
     public float playSpeed = 0.2f;
     public float forwardSpeed = 0.4f;
 
+	public ObstacleMoving fallingObstacleScript;
+
     public DockManagementScript dmScript;
-    public int lastFrameState;
+	bool isMoving = false;
+	Coroutine moveCoroutine;
+	Coroutine leaveCoroutine;
 
     void Start()
     {
 
         speed = playSpeed;
         timer = 0;
-
-        lastFrameState = dmScript.currentState;
-        StartCoroutine(NormalMove());
-    }
-
-    void Update()
-    {
-        if (dmScript.currentState != lastFrameState)
-        {
-            switch (dmScript.currentState)
-            {
-                case (int)DockManagementScript.states.backwards:
-                    StopAllCoroutines();
-                    StartCoroutine(BackwardMove());
-                    speed = playSpeed;
-                    break;
-                case (int)DockManagementScript.states.pause:
-                    speed = 0;
-                    StopAllCoroutines();
-                    break;
-                case (int)DockManagementScript.states.play:
-                    StopAllCoroutines();
-                    StartCoroutine(NormalMove());
-                    speed = playSpeed;
-                    break;
-                case (int)DockManagementScript.states.forward:
-                    StopAllCoroutines();
-                    StartCoroutine(NormalMove());
-                    speed = forwardSpeed;
-                    break;
-
-            }
-            lastFrameState = dmScript.currentState;
-        }
-
-
-       
     }
 
 
-    IEnumerator NormalMove()
-    {
-        while (true)
-        {
-            //Debug.Log("go");
-            float pingPong = Mathf.PingPong(Time.time * speed, 1);
-            transform.localPosition = Vector3.Lerp(StartPosition.position, EndPosition.position, pingPong);
-            if (timer > 1)
-                timer = 0;
-            yield return 0;
-        }
 
-    }
+	IEnumerator Move(){
+		while (true) {
+			switch (dmScript.currentState) {
+			case (int)DockManagementScript.states.backwards:
+				speed = -playSpeed;
+				break;
+			case (int)DockManagementScript.states.pause:
+				speed = 0;
+				break;
+			case (int)DockManagementScript.states.play:
+				speed = playSpeed;
+				break;
+			case (int)DockManagementScript.states.forward:
+				speed = forwardSpeed;
+				break;
+			}
 
-    IEnumerator BackwardMove()
-    {
-        while(true)
-        {
-            //Debug.Log("Gogo");
-            float pingPong = Mathf.PingPong(Time.time * speed, 1);
-            transform.localPosition = Vector3.Lerp(EndPosition.position, StartPosition.position, pingPong);
-            if (timer < 0)
-                timer = 1;
-            yield return 0;
-        }
-    }
+			timer += Time.deltaTime * speed;
+			if (timer < 0)
+				timer = 0;
+			if (timer > 1)
+				timer = 1;
+			transform.position = Vector3.Lerp (StartPosition.position, EndPosition.position, timer);
+			yield return 0;
+		}
+	}
 
-
+	IEnumerator LeavePlatform(){
+		float secondsLeft = 0;
+		while (secondsLeft < 2.0f) {
+			secondsLeft += Time.deltaTime;
+			yield return 0;
+		}
+		timer = 0;
+		transform.position = Vector3.Lerp (StartPosition.position, EndPosition.position, timer);
+		StopCoroutine (moveCoroutine);
+		fallingObstacleScript.StopMoving ();
+		yield return 0;
+	}
 
     void OnTriggerEnter(Collider other)
     {
-       /* if (other.gameObject.name == "Obstacle")
-        {
-            Debug.Log("Hit");
-            StopAllCoroutines();
-        }*/
-
        if (other.tag == "Player")
         {
-           
-            other.transform.parent = transform;
+			isMoving = true;
+			other.transform.parent = transform;
+			moveCoroutine = StartCoroutine(Move());
+			fallingObstacleScript.StartMoving ();
+			if (leaveCoroutine != null) {
+				StopCoroutine (leaveCoroutine);
+			}
         }
     }
 
@@ -109,8 +87,8 @@ public class SpeedPlatformScript : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            
             other.transform.parent = null;
+			leaveCoroutine = StartCoroutine (LeavePlatform ());
         }
     }
 }

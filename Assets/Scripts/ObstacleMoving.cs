@@ -4,30 +4,32 @@ using UnityEngine;
 
 public class ObstacleMoving : MonoBehaviour {
 
-    public Vector3 StartPos;
-    public Vector3 EndPos;
+	public Transform StartPos;
+	public Transform EndPos;
     public float speed = 0.5f;
+	public Coroutine moveCoroutine;
+	float timer = 0;
 
-    void Start () {
 
-        StartPos = transform.localPosition;
+	public void StartMoving (){
 
-        StartCoroutine(ClosingA());
+		moveCoroutine = StartCoroutine(ClosingA());
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+
+	public void StopMoving(){
+		if(moveCoroutine!=null)
+			StopCoroutine (moveCoroutine);
+		timer = 0;
+		transform.position = Vector3.Lerp(StartPos.position, EndPos.position, timer);
 	}
 
     IEnumerator ClosingA()
     {
-        float timer = 0;
 
         while(timer < 1)
         {
             timer += Time.deltaTime * speed;
-            transform.localPosition = Vector3.Lerp(StartPos, EndPos, timer);
+			transform.position = Vector3.Lerp(StartPos.position, EndPos.position, timer);
             yield return 0;
         }
     }
