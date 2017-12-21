@@ -23,10 +23,6 @@ public class FallingAsyncScript : MonoBehaviour
     float timer2 = 0;
     float timer3 = 0;
 
-    bool timer1Playing = false;
-    bool timer2Playing = false;
-    bool timer3Playing = false;
-
     public float speed;
     float playSpeed = 0.15f;
     float forwardSpeed = 0.5f;
