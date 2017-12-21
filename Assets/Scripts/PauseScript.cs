@@ -23,7 +23,7 @@ public class PauseScript : MonoBehaviour {
             Pause();
         }
 	}
-
+     
     public void Pause()
     {
         Cursor.visible = true;
