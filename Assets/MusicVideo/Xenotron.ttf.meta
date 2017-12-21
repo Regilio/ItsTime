@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: ea17f67638fda594590f039ccf1b7128
+timeCreated: 1513866584
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Xenotron
+  fontNames:
+  - Xenotron
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
