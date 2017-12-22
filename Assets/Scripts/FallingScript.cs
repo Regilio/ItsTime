@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FallingScript : MonoBehaviour
 {
-	public FixPositionScript fixPosScript;
+    public FixPositionScript fixPosScript;
     public Vector3 EndPosition;
     public Vector3 StartPosition;
 
@@ -14,19 +14,19 @@ public class FallingScript : MonoBehaviour
     public float forwardSpeed = 0.4f;
 
     public float depopTimer = 5.0f;
- 
+
 
     public DockManagementScript dmScript;
     public int lastFrameState = -1;
 
     void Start()
     {
-		fixPosScript = GetComponentInChildren<FixPositionScript> ();
+        fixPosScript = GetComponentInChildren<FixPositionScript>();
         speed = playSpeed;
         StartCoroutine(FallingCoroutine());
         dmScript = GameObject.Find("Dock").GetComponent<DockManagementScript>();
         timer = 0;
-        
+
         switch (dmScript.currentState)
         {
 
@@ -65,9 +65,9 @@ public class FallingScript : MonoBehaviour
                 case (int)DockManagementScript.states.backwards:
                     StopAllCoroutines();
                     speed = playSpeed;
-                    
+
                     timer = 1 - timer;
-                   
+
                     StartCoroutine(ElevateCoroutine());
                     break;
                 case (int)DockManagementScript.states.pause:
@@ -106,10 +106,11 @@ public class FallingScript : MonoBehaviour
             timer += Time.deltaTime * speed;
 
             transform.localPosition = Vector3.Lerp(StartPosition, EndPosition, timer);
-			if (timer / speed >= depopTimer) {
-				fixPosScript.removeSon ();
-				Destroy(gameObject);
-			}
+            if (timer / speed >= depopTimer)
+            {
+                fixPosScript.removeSon();
+                Destroy(gameObject);
+            }
             yield return 0;
         }
 
@@ -124,10 +125,11 @@ public class FallingScript : MonoBehaviour
             timer += Time.deltaTime * speed;
 
             transform.localPosition = Vector3.Lerp(StartPosition, EndPosition, timer);
-			if (timer / speed >= depopTimer / 2.0f){
-				fixPosScript.removeSon ();
-				Destroy(gameObject);
-			}
+            if (timer / speed >= depopTimer / 2.0f)
+            {
+                fixPosScript.removeSon();
+                Destroy(gameObject);
+            }
             yield return 0;
         }
 
@@ -139,11 +141,12 @@ public class FallingScript : MonoBehaviour
         {
             timer += Time.deltaTime * speed;
             transform.localPosition = Vector3.Lerp(EndPosition, StartPosition, timer);
-           
-			if (timer / speed >= depopTimer){
-				fixPosScript.removeSon ();
-				Destroy(gameObject);
-			}
+
+            if (timer / speed >= depopTimer)
+            {
+                fixPosScript.removeSon();
+                Destroy(gameObject);
+            }
             yield return 0;
         }
     }

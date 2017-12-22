@@ -5,8 +5,7 @@ using UnityEngine;
 public class PauseScript : MonoBehaviour {
 
     public GameObject PauseCanvas;
-	public bool Paused = false;
-	public DockManagementScript dmScript;
+    public bool Paused = false;
 
 
     private void Start()
@@ -18,23 +17,19 @@ public class PauseScript : MonoBehaviour {
     void Update () {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            /*Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.None;*/
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
             Paused = !Paused;
             Pause();
         }
 	}
-
-    private void Pause()
+     
+    public void Pause()
     {
-        /*Cursor.visible = true;
-        Cursor.lockState = CursorLockMode.None;*/
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
         Time.timeScale = Paused ? 0 : 1;
-		if (Paused) {
-			dmScript.addEvent (gameObject, true);
-		} else {
-			dmScript.removeEvent (gameObject);
-		}
+        
         PauseCanvas.SetActive(Paused);
     }
 }

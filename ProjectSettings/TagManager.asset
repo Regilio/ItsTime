@@ -4,13 +4,12 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - RotatePlat
-  - Potion
+  - Obstacle
   - Ground
   - Platform
-  - Obstacle
-  - PuitsMana
-  - ManaBar
+  - Potion
+  - RotatePlat
+  - Fragment
   layers:
   - Default
   - TransparentFX

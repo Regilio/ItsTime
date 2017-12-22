@@ -18,9 +18,6 @@ public class FixPositionScript : MonoBehaviour
         }
     }
 
-
-
-
     void OnTriggerExit(Collider other)
     {
         if (other.gameObject.tag == "Player")
@@ -32,7 +29,6 @@ public class FixPositionScript : MonoBehaviour
 	public void removeSon(){
 		if (currentSon != null) {
 			currentSon.transform.SetParent (null);
-			currentSon.transform.localScale = new Vector3 (1, 1, 1);
 			currentSon = null;
 		}
 	}

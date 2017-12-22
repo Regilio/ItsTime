@@ -9,15 +9,27 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
+<<<<<<< HEAD
+  m_RootGameObject: {fileID: 1108007361550000}
+  m_IsPrefabParent: 1
+--- !u!1 &1108007361550000
+=======
   m_RootGameObject: {fileID: 1231726053607472}
   m_IsPrefabParent: 1
 --- !u!1 &1038218883342804
+>>>>>>> origin/Regilio2
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
+<<<<<<< HEAD
+  - component: {fileID: 4359364789494008}
+  - component: {fileID: 33302894905107132}
+  - component: {fileID: 23583820107632302}
+  - component: {fileID: 136483694611077546}
+=======
   - component: {fileID: 4853824785738560}
   - component: {fileID: 198088894196714778}
   - component: {fileID: 199974358726462512}
@@ -39,6 +51,7 @@ GameObject:
   - component: {fileID: 33195475815141326}
   - component: {fileID: 23625151139384252}
   - component: {fileID: 136257499796840584}
+>>>>>>> origin/Regilio2
   m_Layer: 0
   m_Name: PuitsMana
   m_TagString: PuitsMana
@@ -46,11 +59,26 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
+--- !u!4 &4359364789494008
+=======
 --- !u!4 &4192640653047918
+>>>>>>> origin/Regilio2
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
+<<<<<<< HEAD
+  m_GameObject: {fileID: 1108007361550000}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 2.66, z: 0}
+  m_LocalScale: {x: 2.3662794, y: 2.3662798, z: 2.3662798}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &23583820107632302
+=======
   m_GameObject: {fileID: 1231726053607472}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 4.31, y: 1.84, z: -39.8}
@@ -74,11 +102,16 @@ Transform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -90, y: -58.52, z: 0}
 --- !u!23 &23625151139384252
+>>>>>>> origin/Regilio2
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
+<<<<<<< HEAD
+  m_GameObject: {fileID: 1108007361550000}
+=======
   m_GameObject: {fileID: 1231726053607472}
+>>>>>>> origin/Regilio2
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -87,7 +120,11 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
+<<<<<<< HEAD
+  - {fileID: 2100000, guid: b8b82c4624e6e074098ed9851764c90d, type: 2}
+=======
   - {fileID: 2100000, guid: 1457c289697ef7244b53eec7b7e623f3, type: 2}
+>>>>>>> origin/Regilio2
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -107,19 +144,33 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+<<<<<<< HEAD
+--- !u!33 &33302894905107132
+=======
 --- !u!33 &33195475815141326
+>>>>>>> origin/Regilio2
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
+<<<<<<< HEAD
+  m_GameObject: {fileID: 1108007361550000}
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!136 &136483694611077546
+=======
   m_GameObject: {fileID: 1231726053607472}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!136 &136257499796840584
+>>>>>>> origin/Regilio2
 CapsuleCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
+<<<<<<< HEAD
+  m_GameObject: {fileID: 1108007361550000}
+=======
   m_GameObject: {fileID: 1231726053607472}
+>>>>>>> origin/Regilio2
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
@@ -127,6 +178,8 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.00000005960464, y: 0, z: -0.00000008940697}
+<<<<<<< HEAD
+=======
 --- !u!198 &198088894196714778
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -3498,3 +3551,4 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+>>>>>>> origin/Regilio2

@@ -9,8 +9,11 @@ EditorBuildSettings:
     path: Assets/Scenes/Main Menu.unity
     guid: 8f18e25813fe7b144bef61c2e0f7263c
   - enabled: 0
-    path: Assets/Thomas's scene.unity
-    guid: 7d0bd3cc0fb98d54c94758811767f48d
-  - enabled: 1
     path: Assets/Scenes/Niveau 1.unity
     guid: 7e3639889a8337b42bf5b328ee033496
+  - enabled: 0
+    path: Assets/Scenes/Niveau 2.unity
+    guid: 1957f2258e5af9c43b60817d726d364b
+  - enabled: 1
+    path: Assets/Scenes/Scene poubelle/TestSonoreNiveau2.unity
+    guid: 669c928c29b87864fbbb7a58c3af7ad9
